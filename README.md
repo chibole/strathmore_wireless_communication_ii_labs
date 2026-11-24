@@ -35,7 +35,7 @@ Python is used as an engineering analysis tool. The emphasis is on understanding
 
 ## 2. Repository organisation
 
-The repository is organised as follows:
+The lecturer's repository is organised as follows:
 
 ```text
 strathmore_wireless_communication_ii_labs/
@@ -63,6 +63,8 @@ Contains datasets used in the laboratory exercises.
 
 The datasets may be simulated or lecturer-provided datasets. Each dataset should be accompanied by an explanation of its fields, units and intended use.
 
+Students may also generate their own datasets as instructed in individual laboratory exercises.
+
 ### notebooks/
 
 Contains Jupyter notebooks used for calculations, analysis, visualisation and interpretation.
@@ -85,23 +87,50 @@ The repository will be expanded progressively as the course advances.
 
 This laboratory introduces telecommunications traffic measurement and the interpretation of call activity in cellular networks.
 
+The laboratory is designed to develop students' understanding of traffic engineering principles and their application to cellular network planning.
+
+**Laboratory learning activities**
+
 Students will:
 
-1. Inspect and prepare a simulated call-record dataset.
+1. Understand basic telecommunications traffic engineering concepts.
 2. Calculate call arrival rate and mean call holding time.
 3. Calculate traffic volume and traffic intensity in Erlangs.
-4. Analyse traffic variation over a 24-hour period.
-5. Plot hourly traffic intensity using Matplotlib.
-6. Identify busy-hour and low-demand periods.
-7. Explain how traffic measurements inform GSM traffic-channel planning.
+4. Generate their own simulated telecommunications traffic datasets using Python.
+5. Inspect and prepare call-record datasets for engineering analysis.
+6. Analyse traffic variation over a 24-hour period.
+7. Plot hourly traffic intensity using Matplotlib.
+8. Identify busy-hour and low-demand periods.
+9. Explain how traffic measurements inform GSM traffic-channel planning.
+10. Apply traffic engineering principles to blocking probability and network dimensioning.
 
-The laboratory provides the foundation for subsequent work on blocking probability and network dimensioning.
+**Access the LAB 1 notebook**
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chibole/strathmore_wireless_communication_ii_labs/blob/master/notebooks/LAB1_Traffic_Measurement_Analysis.ipynb)
+
+Click the badge above to open the lecturer's LAB 1 notebook directly in Google Colab.
+
+**Current laboratory stage**
+
+The first stage of LAB 1 covers telecommunications traffic engineering fundamentals and the generation of individual simulated telecommunications traffic datasets.
+
+At this stage, students are required to:
+
+1. Access the lecturer's notebook through Google Colab.
+2. Create their own copies of the notebook in their personal GitHub repositories.
+3. Follow the instructions provided to generate their individual telecommunications traffic datasets.
+4. Inspect the generated records.
+5. Download and upload their CSV datasets to their personal GitHub repositories.
+
+The current activity concludes with the successful generation and storage of each student's own dataset.
+
+Further activities involving traffic analysis, visualisation, busy-hour identification and GSM capacity planning will be introduced progressively as LAB 1 continues.
 
 **Main resources:**
 
-- Dataset: `data/traffic_measurements.csv`
 - Notebook: `notebooks/LAB1_Traffic_Measurement_Analysis.ipynb`
-- Student guide: `docs/LAB1_Student_Setup_and_GitHub_Guide.docx`
+- Dataset reference: `data/traffic_measurements.csv`
+- Student setup and GitHub guide: `docs/LAB1_Student_Setup_and_GitHub_Guide.docx`
 
 ### Future laboratory exercises
 
@@ -121,12 +150,13 @@ https://colab.research.google.com/
 
 To access a laboratory notebook:
 
-1. Open the relevant notebook in the `notebooks/` directory.
-2. Download the notebook or open it through Google Colab using the GitHub option.
-3. Upload the associated dataset from the `data/` directory when required.
-4. Execute the notebook cells in sequence.
-5. Study the outputs, graphs and calculations.
-6. Complete the questions and practical activities.
+1. Open the relevant notebook using the link provided in this README or the `notebooks/` directory.
+2. Open the notebook using Google Colab.
+3. Save your own copy to your personal GitHub repository.
+4. Follow the instructions provided in the notebook.
+5. Execute the required Python Code cells in sequence.
+6. Study the outputs and complete the assigned practical activities.
+7. Save your completed notebook and generated files in your personal repository.
 
 Students who prefer to work locally may install Python, Git and Jupyter Notebook. Refer to the software installation guide in the `docs/` directory.
 
@@ -134,23 +164,58 @@ Students who prefer to work locally may install Python, Git and Jupyter Notebook
 
 ## 5. Student GitHub workflow and submissions
 
-The lecturer's repository is the central source of laboratory materials. Students should maintain their own repositories for laboratory work and assessment submissions.
+The lecturer's repository is the central source of laboratory materials.
 
-Each student should create a separate private GitHub repository using the admission number as the repository name, following the lecturer's instructions.
+Each student must maintain an individual GitHub repository for laboratory work and assessment submissions.
 
-The recommended workflow is:
+### 5.1 Creating a personal GitHub repository
 
-1. Obtain the laboratory materials from the lecturer's repository.
-2. Create or update the student's private repository.
-3. Clone the laboratory materials to the student's working environment.
-4. Complete the assigned notebook and practical activities.
-5. Save the completed notebook, generated datasets, graphs and laboratory report.
-6. Commit and push the completed work to the student's private repository.
-7. Submit the private repository URL as instructed by the lecturer.
+Each student should:
 
-Students should not push their completed work directly into the lecturer's original repository.
+1. Create a GitHub account if they do not already have one.
+2. Sign in to https://github.com/.
+3. Create a new repository using their admission number as the repository name.
+4. Set the repository visibility to **Private**.
+5. Initialise the repository with a README file.
 
-Where instructed, students will generate individual simulated datasets using a reproducible random seed derived from their admission numbers. This will enable each student to analyse a distinct dataset while following the same laboratory procedure.
+For example, the repository name should follow this format:
+
+`YOUR_ADMISSION_NUMBER`
+
+### 5.2 Working with the lecturer's notebook
+
+For the current LAB 1 activity:
+
+1. Open the lecturer's notebook using the **Open in Colab** badge in Section 3.
+2. In Google Colab, select **File → Save a copy in GitHub**.
+3. Select your personal GitHub repository.
+4. Save the notebook using the following path:
+
+   `notebooks/LAB1_Traffic_Measurement_Analysis.ipynb`
+
+5. Follow the laboratory instructions and complete the required activities.
+6. Download your generated CSV dataset.
+7. Upload the dataset to the `data/` folder in your personal repository.
+
+You do not need to fork the lecturer's repository. You should work using your own copy of the notebook.
+
+### 5.3 Saving and updating your work
+
+Students should ensure that their work is saved in their personal GitHub repositories.
+
+GitHub uses version control to keep track of changes.
+
+The following terms are important:
+
+- **Repository:** An online project folder where you store your work.
+- **Commit:** A saved version of your changes, accompanied by a short description.
+- **Push:** Sending committed changes from a local computer to GitHub.
+- **Fork:** Creating a copy of another person's repository under your GitHub account. Forking is not required for the current laboratory workflow.
+- **Clone:** Downloading a GitHub repository to your computer.
+
+For the current LAB 1 activity, students can use the GitHub website and Google Colab without installing Git or using command-line instructions.
+
+**Important:** Executing a notebook cell does not automatically save the updated notebook to GitHub. Ensure that changes made after creating your initial copy are saved to your personal repository.
 
 ---
 
@@ -163,7 +228,17 @@ Unless otherwise specified in an individual laboratory handout, submissions shou
 - Graphs and visualisations.
 - Laboratory report explaining the methodology, calculations and findings.
 - Engineering interpretation and conclusions.
-- GitHub repository link.
+- Personal GitHub repository link.
+
+For the current stage of LAB 1, the required submission consists of:
+
+1. Your personal GitHub repository link.
+2. Your notebook: `LAB1_Traffic_Measurement_Analysis.ipynb`.
+3. Your generated dataset: `traffic_measurements.csv`.
+
+The notebook and dataset should be available in your personal repository.
+
+Further submission requirements will be communicated as the laboratory activities progress.
 
 Students should ensure that their notebooks can be executed and that their calculations are clearly explained.
 
@@ -182,6 +257,8 @@ All students are expected to:
 
 Sharing laboratory instructions and discussing concepts is encouraged. However, submitted calculations, interpretations and reports must reflect each student's own understanding and work.
 
+Where individual datasets are required, students must generate their own datasets using the instructions provided. Students should not submit another student's dataset as their own.
+
 ---
 
 ## 8. Repository maintenance
@@ -190,8 +267,13 @@ This repository is maintained by the course lecturer and will be updated as labo
 
 Students should periodically check the repository for new laboratory materials and instructions.
 
+The laboratory notebooks may be expanded or updated as the course progresses. Students should therefore check for the latest instructions before beginning a new laboratory activity.
+
+---
+
 **Course:** BEE 5224 – Wireless Communications II  
 **Institution:** Strathmore University  
+**Department:** Electrical and Electronic Engineering  
 **Repository:** `strathmore_wireless_communication_ii_labs`
 
 **End of README**
